@@ -169,6 +169,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Documentation\Use Cases of the Budget Tracking Tool.docx" />
+    <None Include="Documentation\VSTOBudgetTracker.pdf" />
     <None Include="Estimating.VSTO_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
