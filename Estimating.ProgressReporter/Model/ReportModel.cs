@@ -8,10 +8,8 @@ namespace Estimating.ProgressReporter.Interfaces.Model
 {
     public class ReportModel : ISystemModel
     {
-        public string jobNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string jobName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-
-
+        public string JobNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string JobName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<object> Systems { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

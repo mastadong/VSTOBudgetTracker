@@ -12,7 +12,9 @@ namespace Estimating.ProgressReporter.Interfaces.Model
     /// </summary>
      public interface ISystemModel 
     {
-        string jobNumber { get; set; }
-        string jobName { get; set; }
+        string JobNumber { get; set; }
+        string JobName { get; set; }
+        List<object> Systems { get; set; }
+
     }
 }

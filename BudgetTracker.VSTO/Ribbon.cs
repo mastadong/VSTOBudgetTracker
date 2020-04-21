@@ -31,7 +31,6 @@ namespace BudgetTracker.VSTO
             currentSheet.Range["A1"].Value = "Mike is a fuck.";
             currentSheet.Columns.AutoFit();
 
-            Worksheet secondWorksheet = Globals.Factory.GetVstoObject()
 
         }
     }
