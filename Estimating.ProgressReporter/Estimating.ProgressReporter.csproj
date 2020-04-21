@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\Model\ComparatorReport.cs" />
-    <Compile Include="Interfaces\Model\ComparatorResult.cs" />
+    <Compile Include="Model\ComparatorReport.cs" />
+    <Compile Include="Model\ComparatorResult.cs" />
     <Compile Include="Model\EstimateModel.cs" />
     <Compile Include="Interfaces\Model\ISystemEstimate.cs" />
     <Compile Include="Interfaces\Model\IPhaseCode.cs" />
