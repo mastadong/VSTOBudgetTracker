@@ -9,11 +9,12 @@ namespace Estimating.ProgressReporter.Interfaces.Model
 {
     public class ComparatorResult
     {
-        string SystemName { get; set; }
-        bool IsWorkCompleted { get; set; }
-        List<PhaseCode> AssociatedPhaseCodes { get; set; }
-        List<PhaseCode> CompletePhaseCodes { get; set; }
-        List<PhaseCode> IncompletePhaseCodes { get; set; }
-
+        public string SystemName { get; set; }
+        public bool IsWorkCompleted { get; set; }
+        
+        //The user might want a full picture of the estimated phase codes for the system.  Provide it here for reference.
+        public List<PhaseCode> EstimatePhaseCodes { get; set; }
+        public List<PhaseCode> FinishedPhaseCodes { get; set; }
+        public List<PhaseCode> UnfinishedPhaseCodes { get; set; }
     }
 }

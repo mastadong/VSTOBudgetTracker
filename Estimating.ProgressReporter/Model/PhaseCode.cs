@@ -9,11 +9,16 @@ namespace Estimating.ProgressReporter.Model
 {
     public class PhaseCode : IPhaseCode
     {
-        public string FullPhaseCode { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string PhaseCodeSuffix { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public PhaseCodeCategory PhaseCodePrefix { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int EstimatedHours { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime DateCompleted { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public PhaseCode(string fullPhaseCode)
+        {
+            FullPhaseCode = fullPhaseCode;
+        }
+
+        public string FullPhaseCode { get; set; }
+        public string PhaseCodeSuffix { get; set; }
+        public PhaseCodeCategory PhaseCodePrefix { get; set; }
+        public int EstimatedHours { get; set; }
+        public DateTime DateCompleted { get; set; }
     }
 
 }

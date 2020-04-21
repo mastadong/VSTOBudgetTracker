@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DummyFactory.cs" />
+    <Compile Include="Interfaces\Services\ISystemModelService.cs" />
     <Compile Include="Model\ComparatorReport.cs" />
     <Compile Include="Model\ComparatorResult.cs" />
     <Compile Include="Model\EstimateModel.cs" />
@@ -58,10 +60,14 @@
     <Compile Include="Repository\IDataRepository.cs" />
     <Compile Include="Repository\IModelDataRepository.cs" />
     <Compile Include="Repository\IReportDataRepository.cs" />
+    <Compile Include="Services\ComparatorService.cs" />
     <Compile Include="Services\EstimateModelService.cs" />
+    <Compile Include="Services\ModelReportService.cs" />
     <Compile Include="Services\ReportModelService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Core\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Estimating.SQLService\Estimating.SQLService.csproj">
       <Project>{8881481c-2bd2-4f2c-bb30-c54594f50ff5}</Project>
