@@ -9,12 +9,34 @@ namespace Estimating.ProgressReporter.Model
 {
     public class SystemReport : ISystemReport
     {
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<IPhaseCode> PhaseCodes { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public string Name { get; set; }
+        public List<PhaseCode> PhaseCodes { get; set; }
+
+        //Constructors
+        public SystemReport(string name)
+        {
+            Name = name;
+        }
+        
+        public SystemReport()
+        {
+            //Do nothing
+        }
 
         public int GetPhaseCodeCount()
         {
-            throw new NotImplementedException();
+            return PhaseCodes.Count();
+        }
+
+        public List<string> GetFullPhaseCodeStrings()
+        {
+            List<string> fullPhaseCodeStrings = new List<string>();
+            foreach(PhaseCode p in PhaseCodes)
+            {
+                fullPhaseCodeStrings.Add(p.FullPhaseCode);
+            }
+            return fullPhaseCodeStrings;
         }
     }
 }

@@ -16,6 +16,10 @@ namespace Estimating.ProgressReporter.Interfaces.Services
         EstimateModel _estimateModel { get; set; }
         ReportModel _reportModel { get; set; }
 
-        ComparatorReport GetModelReport();
+        List<ComparatorResult> GetFinishedSystems();
+        List<ComparatorResult> GetPartiallyFinishedSystems();
+        List<ComparatorResult> GetReportedSystems();
+        List<SystemEstimate> GetUnreportedSystems();
+
     }
 }

@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CE3DEE14-D281-4B45-8776-89CD04C644CB}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Estimating.ProgressReporter</RootNamespace>
-    <AssemblyName>Estimating.ProgressReporter</AssemblyName>
+    <ProjectGuid>{0DAD99EF-1DEF-491E-BAAE-2E8655640D7B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DebuggerControl</RootNamespace>
+    <AssemblyName>DebuggerControl</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,37 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DummyFactory.cs" />
-    <Compile Include="Errors\ModelReportWasEmptyException.cs" />
-    <Compile Include="Errors\SystemNameMismatchException.cs" />
-    <Compile Include="Interfaces\Services\ISystemModelService.cs" />
-    <Compile Include="Model\ComparatorReport.cs" />
-    <Compile Include="Model\ComparatorResult.cs" />
-    <Compile Include="Model\EstimateModel.cs" />
-    <Compile Include="Interfaces\Model\ISystemEstimate.cs" />
-    <Compile Include="Interfaces\Model\IPhaseCode.cs" />
-    <Compile Include="Interfaces\Model\ISystemModel.cs" />
-    <Compile Include="Interfaces\Model\ISystemReport.cs" />
-    <Compile Include="Model\ReportModel.cs" />
-    <Compile Include="Interfaces\Services\IComparatorService.cs" />
-    <Compile Include="Interfaces\Services\IModelReportingService.cs" />
-    <Compile Include="Model\PhaseCode.cs" />
-    <Compile Include="Model\SystemEstimate.cs" />
-    <Compile Include="Model\SystemReport.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\IDataRepository.cs" />
-    <Compile Include="Repository\IModelDataRepository.cs" />
-    <Compile Include="Repository\IReportDataRepository.cs" />
-    <Compile Include="Services\ComparatorService.cs" />
-    <Compile Include="Services\EstimateModelService.cs" />
-    <Compile Include="Services\ModelReportingService.cs" />
-    <Compile Include="Services\ReportModelService.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Estimating.SQLService\Estimating.SQLService.csproj">
-      <Project>{8881481c-2bd2-4f2c-bb30-c54594f50ff5}</Project>
-      <Name>Estimating.SQLService</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Estimating.ProgressReporter\Estimating.ProgressReporter.csproj">
+      <Project>{ce3dee14-d281-4b45-8776-89cd04c644cb}</Project>
+      <Name>Estimating.ProgressReporter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Estimating.PseudoDataLayer\Estimating.PseudoDataLayer.csproj">
+      <Project>{6ac66001-c76d-4895-8a91-4aaf94ebd554}</Project>
+      <Name>Estimating.PseudoDataLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

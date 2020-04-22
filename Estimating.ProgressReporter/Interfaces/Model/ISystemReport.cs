@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estimating.ProgressReporter.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,14 @@ namespace Estimating.ProgressReporter.Interfaces.Model
        
         //List of all the phase codes contained in the report that are associated with the equipment system.  If the work is 100% done, then the list of phase
         //codes reported will completely match the list of phase codes contained in the Estimating sheet for the corresponding system.
-        List<IPhaseCode> PhaseCodes { get; set; }
+        List<PhaseCode> PhaseCodes { get; set; }
 
         /// <summary>
         /// Returns the number of reported phase codes for the equipment system.
         /// </summary>
         /// <returns></returns>        
         int GetPhaseCodeCount();
-
+        List<string> GetFullPhaseCodeStrings();
 
     }
 }

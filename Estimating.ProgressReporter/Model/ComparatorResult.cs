@@ -11,8 +11,10 @@ namespace Estimating.ProgressReporter.Interfaces.Model
     {
         public string SystemName { get; set; }
         public bool IsWorkCompleted { get; set; }
-        
+        public double PercentComplete { get; set; }
+
         //The user might want a full picture of the estimated phase codes for the system.  Provide it here for reference.
+        //In this context, "EstimatePhaseCodes = FinishedPhaseCodes + UnfinishedPhaseCodes"
         public List<PhaseCode> EstimatePhaseCodes { get; set; }
         public List<PhaseCode> FinishedPhaseCodes { get; set; }
         public List<PhaseCode> UnfinishedPhaseCodes { get; set; }

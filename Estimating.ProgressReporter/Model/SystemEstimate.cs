@@ -7,16 +7,47 @@ using System.Threading.Tasks;
 
 namespace Estimating.ProgressReporter.Model
 {
+    public enum EquipmentSystemType
+    {
+        Duct,
+        SmallFans, 
+        LargeFans,
+        ERV, 
+        TrashExhaust,
+        GarageExhaust,
+        CorridorSystem
+    }
     public class SystemEstimate : ISystemEstimate
     {
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double PercentComplete { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<IPhaseCode> PhaseCodes { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Name { get; set; }
+        public EquipmentSystemType Type { get; set; }
+        public List<PhaseCode> PhaseCodes { get; set; }
+       
+        public SystemEstimate(string name)
+        {
+            Name = name;
+        }
 
         public int GetPhaseCodeCount()
         {
-            throw new NotImplementedException();
+            if(PhaseCodes != null)
+            {
+                return PhaseCodes.Count();
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public List<string> GetFullPhaseCodeStrings()
+        {
+            List<string> fullPhaseCodeStrings = new List<string>();
+            foreach (PhaseCode p in PhaseCodes)
+            {
+                fullPhaseCodeStrings.Add(p.FullPhaseCode);
+            }
+            return fullPhaseCodeStrings;
         }
     }
 }

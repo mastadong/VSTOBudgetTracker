@@ -19,11 +19,10 @@ namespace Estimating.ProgressReporter.Model
         //markups on the drawing file.
         string Name { get; set; }
         //Describe the type of system.
-        string Type { get; set; }
-        //Quantify the percent complete 
-        double PercentComplete { get; set; }
+        EquipmentSystemType Type { get; set; }
+      
         //Lists all the associated phase codes for the system. 
-        List<IPhaseCode> PhaseCodes { get; set; }
+        List<PhaseCode> PhaseCodes { get; set; }
 
         /// <summary>
         /// Returns the number of phase codes for the equipment system.
@@ -33,5 +32,6 @@ namespace Estimating.ProgressReporter.Model
         /// </remarks>
         /// <returns></returns>
         int GetPhaseCodeCount();
+        List<string> GetFullPhaseCodeStrings();
     }
 }

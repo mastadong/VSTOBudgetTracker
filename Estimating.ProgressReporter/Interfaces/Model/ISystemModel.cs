@@ -10,11 +10,11 @@ namespace Estimating.ProgressReporter.Interfaces.Model
     /// <summary>
     /// Represents the required interface for the two master model objects, EstimateModel and ReportModel. 
     /// </summary>
-     public interface ISystemModel 
+     public interface ISystemModel<T> 
     {
         string JobNumber { get; set; }
         string JobName { get; set; }
-        List<object> Systems { get; set; }
+        List<T> Systems { get; set; }
 
     }
 }

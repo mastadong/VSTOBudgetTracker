@@ -19,6 +19,9 @@ namespace Estimating.ProgressReporter.Model
         public PhaseCodeCategory PhaseCodePrefix { get; set; }
         public int EstimatedHours { get; set; }
         public DateTime DateCompleted { get; set; }
+
+        
+
     }
 
 }

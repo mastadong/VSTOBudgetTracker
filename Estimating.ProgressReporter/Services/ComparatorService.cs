@@ -1,5 +1,4 @@
-﻿using Estimating.ProgressReporter.Core;
-using Estimating.ProgressReporter.Interfaces.Model;
+﻿using Estimating.ProgressReporter.Interfaces.Model;
 using Estimating.ProgressReporter.Interfaces.Services;
 using Estimating.ProgressReporter.Model;
 using System;
@@ -16,14 +15,12 @@ namespace Estimating.ProgressReporter.Services
     /// </summary>
     public class ComparatorService : IComparatorService
     {
-        public ReportModel _reportModel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public EstimateModel _estimateModel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IModelReportingService _modelReportingService { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
+        public ReportModel _reportModel { get; set; }
+        public EstimateModel _estimateModel { get; set; }
 
         public ComparatorReport Compare(EstimateModel estimateModel, ReportModel reportModel)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }
