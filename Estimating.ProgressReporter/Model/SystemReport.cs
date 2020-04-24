@@ -14,6 +14,14 @@ namespace Estimating.ProgressReporter.Model
         public List<PhaseCode> PhaseCodes { get; set; }
 
         //Constructors
+
+        public SystemReport(string name, List<PhaseCode> phaseCodes)
+        {
+            Name = name;
+            PhaseCodes = phaseCodes;
+        }
+
+
         public SystemReport(string name)
         {
             Name = name;

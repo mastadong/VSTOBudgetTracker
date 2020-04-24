@@ -291,6 +291,35 @@ namespace DebuggerControl
             //running, you can hover over objects to see their current contents.  
             //Try changing some of the SystemReport and SystemEstimate data to see how the changes will filter down into the final report.  
 
+
+            List<PhaseCode> phaseCodes = new List<PhaseCode>();
+            PhaseCode ductwork = new PhaseCode("0001-0801");
+            PhaseCode equipment = new PhaseCode("0001-0901");
+            PhaseCode GRDs = new PhaseCode("0001-0401");
+
+            phaseCodes.Add(ductwork);
+            phaseCodes.Add(equipment);
+            phaseCodes.Add(GRDs);
+
+            //We now have our populated list
+
+            //Assume phase code lists are different for different systems.  This is just for fun.
+            SystemReport myreport1 = new SystemReport("EF-1", phaseCodes);
+            SystemReport myreport2 = new SystemReport("EF-2", phaseCodes);
+            SystemReport myreport3 = new SystemReport("GEF-2", phaseCodes);
+            SystemReport myreport4 = new SystemReport("GEF-2", phaseCodes);
+
+            ReportModel mymodel = new ReportModel("2170508");
+            mymodel.Systems.Add(myreport1);
+            mymodel.Systems.Add(myreport2);
+            mymodel.Systems.Add(myreport3);
+            mymodel.Systems.Add(myreport4);
+
+
+
+
+
+
             Console.ReadLine();
         }
     }
